@@ -1,0 +1,173 @@
+Kotlin Interview Questions and Answers
+----------------------------------------------------------------------------------------------------
+1) What is Kotlin? / Describe Kotlin in brief.
+Kotlin is a general-purpose, statically typed, open-source programming language that runs on the JVM. It runs on JVM and can be used anywhere Java is used today. It can be compiled either using Java source code or LLVM compiler. It is generally used to develop Android apps, server-side apps, and much more.
+*
+Statically typed ka matlab hai ki har variable ka data type pehle se fixed hota hai aur compiler compile time par check karta hai. Agar galat type ki value di jaye, to error aa jata hai.
+JVM Compiler → Jab Kotlin ka use Java ke sath ya Android app banane ke liye hota hai.
+LLVM Compiler → Jab Kotlin se native applications (jaise Windows, Linux, macOS, iOS) banani hoti hain.
+------------------------------------
+| general purpose                  |
+| statically typed                 |
+|open source prog lang             |
+|run by jvm                        |
+------------------------------------
+
+
+----------------------------------------------------------------------------------------------------
+2) What do you know about the history of Kotlin?
+
+Kotlin was developed by the JetBrains team. This project was started in 2010 to develop a language for Android apps development, and officially its first version was released in February 2016. Kotlin was developed under the Apache 2.0 license.
+----------------------------------------------------------------------------------------------------
+3) What are the most important features of Kotlin?
+The most popular features of kotlin are:
+
+1.Concise: Kam code likhna padta hai.
+2.Compact Code: Java se lagbhag 40% kam code hota hai.
+3.Simple: Seekhna aur use karna aasan hai.
+4.Open Source: Free aur sabke liye available hai.
+5.Null Safety: Null errors ko rokta hai.
+6.Extensions: Purani class me bina badlav kiye naye features add kar sakte hain.
+7.Java Interoperability: Java aur Kotlin ek sath kaam kar sakte hain.
+8.Smart Cast: Data type automatically pehchan leta hai.
+9.Low Learning Curve: Jaldi seekha ja sakta hai.
+10.Compilation Time: Jaldi compile hota hai.
+11.Tools-friendly: IDE aur command line dono me support karta hai.
+----------------------------------------------------------------------------------------------------
+4) Why did you switch to Kotlin from Java? Why do some developers like to switch to Kotlin from Java?
+
+Kotlin Java se zyada simple aur clean programming language hai. Isme Java ke comparison me kam code likhna padta hai, isliye coding easy ho jati hai. Kotlin me kuch aise features bhi hain jo Java me nahi hain. Android Studio bhi Kotlin ko support karta hai, isliye Android app development ke liye Kotlin ek bahut achhi choice hai aur future me iska use aur bhi badhne wala hai.
+
+----------------------------------------------------------------------------------------------------
+Q5 How does Kotlin work on Android?
+
+Kotlin code is compiled into JVM bytecode, which runs on the Android Runtime (ART).
+
+Aur bhi simple (Exam language):
+
+Kotlin code compile hokar Android Runtime (ART) par run hota hai.
+----------------------------------------------------------------------------------------------------
+6) What is the difference between the variable declaration with var and variable declaration with val?
+var aur val se variable declare kiye jaate hain, lekin dono ka use alag-alag kaam ke liye hota hai.
+
+variable declaration = Variable banana (declare karna)
+var = Badalne wala variable ,mutable = Change hone wal
+val = Na badalne wala variable, inmutable
+different purposes = Alag-alag kaam
+----------------------------------------------------------------------------------------------------
+7) What is the difference between the variable declaration with val and variable declaration with const?
+Definition:
+
+val ek read-only variable hota hai. Iski value sirf ek baar assign ki ja sakti hai. Ek baar value de di, to baad me usse change nahi kar sakte.
+
+Example
+val name = "Sakshi"
+
+Yahan
+
+name ki value "Sakshi" hai.
+Agar baad me likhen
+name = "Rahul"
+
+To Error aayega.
+
+Isliye val = one-time assignment.
+
+Ab const kya hota hai?
+
+Definition:
+
+const ka matlab constant value hota hai. Matlab jis value ko kabhi bhi change nahi karna hai, uske liye const use karte hain.
+
+Ye program compile hone se pehle hi fix ho jati hai.
+
+Isliye ise compile-time constant bhi kehte hain.
+
+Example
+
+const val PI = 3.14
+
+Ya
+
+const val APP_NAME = "Calculator"
+
+PI aur APP_NAME kabhi change nahi honge.
+
+Ab confusion yahi hai...
+
+Student puchte hain
+
+Sir, val bhi change nahi hota aur const bhi change nahi hota. To difference kya hai?
+
+Answer👇
+
+val
+Read-only variable hai.
+Value runtime me bhi mil sakti hai.
+Function se value le sakta hai.
+
+Example
+
+val time = System.currentTimeMillis()
+
+Yahan time ki value program chalne par milegi.
+
+Isliye ye const nahi ho sakta.
+
+const
+Hamesha fixed value hoti hai.
+Compile time par hi value pata hoti hai.
+Sirf String ya primitive values (Int, Double, Boolean, etc.) ke liye use hota hai.
+Function ki return value ko const nahi bana sakte.
+
+Example
+
+const val MAX_USERS = 100
+
+Ye value kabhi change nahi hogi.
+
+Real-life Example
+
+Socho school me do cheeze hain.
+
+val
+
+Tumhari Date of Birth
+
+Ek baar set ho gayi.
+
+Badal nahi sakte.
+
+Lekin ye program chalne ke time bhi mil sakti hai.
+
+const
+
+School ka naam
+
+ABC Public School
+
+Ye pehle se hi fix hai.
+
+Sab jagah same rahega.
+
+Program chalne se pehle hi pata hai.
+----------------------------------------------------------------------------------------------------
+8) How can you create a singleton in Kotlin?
+----------------------------------------------------------------------------------------------------
+9) How can we convert a Kotlin source file to a Java source file?
+
+Follow the steps given below to convert your Kotlin source file to a Java source file:
+
+First, open your Kotlin project in the IntelliJ IDEA / Android Studio.
+Then navigate to Tools > Kotlin > Show Kotlin Bytecode.
+Now, click on the Decompile button to get your Java code from the bytecode
+----------------------------------------------------------------------------------------------------
+10) Name some features which are available in Kotlin but not in Java?
+Following are some important Kotlin features that are not available in Java:
+
+Null Safety
+Operator Overloading
+Coroutines
+Range expressions
+Smart casts
+Companion Objects
